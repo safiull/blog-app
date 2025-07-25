@@ -1,3 +1,10 @@
+// for creating a project
+// mkdir blog-app
+// cd blog-app
+// npm init -y
+// npm install express ejs
+// npx nodemon server.js
+
 const express = require('express');
 const path = require('path');
 const app = express();
@@ -13,9 +20,13 @@ const services = [
 ]
 
 app.get('/', (req, res) => {
-    res.render('index', {services});
+    res.render('web/index', {services});
 });
 
+app.get('/login', (req, res) => {
+    res.render('auth/login');
+})
+
 app.listen(3000, () => {
-    console.log("Server is running 1.");
+    console.log("Server is running.");
 });
