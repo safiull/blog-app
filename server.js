@@ -22,7 +22,7 @@ const services = [
 ]
 
 app.get('/', (req, res) => {
-    res.render('web/index', {services});
+    res.render('web/index', {layout: 'layouts/web/index' , services});
 });
 
 app.get('/login', (req, res) => {
