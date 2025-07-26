@@ -29,6 +29,10 @@ app.get('/login', (req, res) => {
     res.render('auth/login', {layout: 'layouts/auth/index'});
 })
 
+app.get('/admin/dashboard', (req, res) => {
+    res.render('admin/index', {layout: 'layouts/admin/index'});
+})
+
 app.listen(3000, () => {
     console.log("Server is running.");
 });
